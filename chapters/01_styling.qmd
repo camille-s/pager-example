@@ -1,0 +1,30 @@
+---
+# format: pager-html
+---
+
+Because this format renders HTML first, then "prints" it to a PDF, any styling that can be used in HTML is fair game. This makes it _a lot_ easier to do custom styling and layout than using LaTeX. The template uses a subset of Bootstrap for styling. Some is done manually with Sass (see the files in [./_extension/pager/scss/](./_extensions/pager/scss/)), and some gets inserted by Quarto. Beyond some basic styling choices (main accent color, font) these things will happen behind the scenes. 
+
+One thing you might want to do is adjust the layout, such as splitting text, figures, etc into columns. You can do this directly with HTML blocks using Bootstrap classes, first by wrapping the entire section to be split with `<div class="row"></div>`, then wrapping each column in a variation on `<div class="col-*"></div>`, where `*` is the number of grid columns to span. Bootstrap's grid system adds up to 12, so two sections with `class="col-6"` will become evenly sized columns, whereas one `class="col-4"` and one `class="col-8"` will take up one third and two thirds of the page, respectively (works nicely for a skinny column of text next to a larger image). Or for even columns, as of Bootstrap 5.0 you can forgo the numbers altogether. You can also use Quarto's `::: {.column-body}` notation or `#| column: body` chunk option. See more on Bootstrap's grid system [here](https://getbootstrap.com/docs/5.3/layout/grid), and the source code for this document to see how these columns got here.
+
+<div class="row">
+
+<div class="col-4">
+
+Also note that the `#| tbl-cap` chunk option creates a table caption as an HTML element, which gets styled to match the overall formatting. The figure equivalent is `fig-cap`. If you want figure titles to match the document styling (I generally do), use that instead of setting titles directly in `ggplot` or whatever you use to make the figure.
+
+</div>
+
+<div class="col-8">
+
+```{r}
+#| tbl-cap: Mean values by species, iris dataset
+with(iris, 
+     aggregate(iris[, 1:4],
+     by = list(Species),
+     FUN = mean)) |>
+  knitr::kable(table.attr = "class='table'", format = "html")
+```
+
+</div>
+
+</div>

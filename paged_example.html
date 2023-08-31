@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.330">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="DataHaven">
+
+<title>Nice report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<link href="paged_example_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="paged_example_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+
+
+<link rel="stylesheet" href="style/paged-style.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">Nice report</h1>
+<p class="subtitle">Draft - New Haven</p>
+<p class="author">DataHaven</p>
+
+<p class="date">August 2023</p>
+</header>
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+  <li><a href="#styling" id="toc-styling">Styling</a></li>
+  <li><a href="#utilities" id="toc-utilities">Utilities</a></li>
+  <li><a href="#notes" id="toc-notes">Notes</a></li>
+  </ul>
+</nav>
+<section id="introduction" class="level2">
+<h2>Introduction</h2>
+<div id="header-left" class="hidden">
+<p>Draft - New Haven</p>
+</div>
+<div id="header-right" class="hidden">
+<p>Nice report</p>
+</div>
+<p>This is an example of how to build a paged report. After processing some metadata here, it uses child documents to incorporate different chapters—this can be useful for putting together longer reports. Those child documents inherit the parent document’s global environment, so use this document to load packages, source scripts, and set parameters that will be used throughout. As an example, this document has a parameter <code>loc</code> which is used to create headers.</p>
+<p>I’m also including front and back covers as starting points. paged.js, the JavaScript library used for splitting the HTML into pages and populating the margins, headers, footers, etc., has classes to denote front cover material and back cover material that then get special treatment (larger fonts, no page numbers, different margins, etc.).</p>
+</section>
+<section id="styling" class="level2">
+<h2>Styling</h2>
+<p>Because this format renders HTML first, then “prints” it to a PDF, any styling that can be used in HTML is fair game. This makes it <em>a lot</em> easier to do custom styling and layout than using LaTeX. The template uses a subset of Bootstrap for styling. Some is done manually with Sass (see the files in <a href="./_extensions/pager/scss/">./_extension/pager/scss/</a>), and some gets inserted by Quarto. Beyond some basic styling choices (main accent color, font) these things will happen behind the scenes.</p>
+<p>One thing you might want to do is adjust the layout, such as splitting text, figures, etc into columns. You can do this directly with HTML blocks using Bootstrap classes, first by wrapping the entire section to be split with <code>&lt;div class="row"&gt;&lt;/div&gt;</code>, then wrapping each column in a variation on <code>&lt;div class="col-*"&gt;&lt;/div&gt;</code>, where <code>*</code> is the number of grid columns to span. Bootstrap’s grid system adds up to 12, so two sections with <code>class="col-6"</code> will become evenly sized columns, whereas one <code>class="col-4"</code> and one <code>class="col-8"</code> will take up one third and two thirds of the page, respectively (works nicely for a skinny column of text next to a larger image). Or for even columns, as of Bootstrap 5.0 you can forgo the numbers altogether. You can also use Quarto’s <code>::: {.column-body}</code> notation or <code>#| column: body</code> chunk option. See more on Bootstrap’s grid system <a href="https://getbootstrap.com/docs/5.3/layout/grid">here</a>, and the source code for this document to see how these columns got here.</p>
+<div class="row">
+<div class="col-4">
+<p>Also note that the <code>#| tbl-cap</code> chunk option creates a table caption as an HTML element, which gets styled to match the overall formatting. The figure equivalent is <code>fig-cap</code>. If you want figure titles to match the document styling (I generally do), use that instead of setting titles directly in <code>ggplot</code> or whatever you use to make the figure.</p>
+</div>
+<div class="col-8">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true">
+<caption>Mean values by species, iris dataset</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Group.1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sepal.Length</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sepal.Width</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Petal.Length</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Petal.Width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">setosa</td>
+<td style="text-align: right;">5.006</td>
+<td style="text-align: right;">3.428</td>
+<td style="text-align: right;">1.462</td>
+<td style="text-align: right;">0.246</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">versicolor</td>
+<td style="text-align: right;">5.936</td>
+<td style="text-align: right;">2.770</td>
+<td style="text-align: right;">4.260</td>
+<td style="text-align: right;">1.326</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">virginica</td>
+<td style="text-align: right;">6.588</td>
+<td style="text-align: right;">2.974</td>
+<td style="text-align: right;">5.552</td>
+<td style="text-align: right;">2.026</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="utilities" class="level2">
+<h2>Utilities</h2>
+<section id="references" class="level3">
+<h3>References</h3>
+<p><a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">Include references</a> from a Bibtex document so they’ll be linked to Zotero or another citation manager. A starter set of common references with shortcodes is included in the file <a href="./references.bib">./references.bib</a>, and a formatter for numbered APA citations is in <a href="./apa-numeric-superscript.csl">./apa-numeric-superscript.csl</a>. For example, if I write something based on the 2021 ACS, I can cite it like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Some facts based on the ACS. <span class="co">[</span><span class="ot">@acs21</span><span class="co">]</span></span></code></pre></div>
+<p>which will look like this:</p>
+<blockquote>
+<p>Some facts based on the ACS.<span class="citation" data-cites="acs21"><sup>1</sup></span></p>
+</blockquote>
+<p>This will automatically create a bibliography item placed in the Notes section. If there’s a <code>html &lt;div&gt;</code> element with the ID <code>html "refs"</code> anywhere, bibliography items will be placed there; otherwise they’re placed at the end of the document. Some YAML settings will change this. If you’d rather create the bibliography manually, set</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppress-bibliography</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+<p>If you want all references to go in the margin instead, set</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">reference-location</span><span class="kw">:</span><span class="at"> margin</span></span></code></pre></div>
+</section>
+<section id="custom-classes" class="level3">
+<h3>Custom classes</h3>
+<div class="margin-layout-right-25">
+<div>
+<p>I’ve added a few classes to the stylesheets that I’ve found useful in making things like the equity reports. To use them, wrap your text in the requisite HTML block.</p>
+<section id="column-layouts" class="level4">
+<h4>Column layouts</h4>
+<p>There’s a set of classes for creating layouts with margins on either the left or right of the page. Apply them with the classes <code>"margin-layout-right-20"</code>, <code>"margin-layout-right-25"</code>, <code>"margin-layout-left-20"</code>, or <code>"margin-layout-left-25"</code>, which denote 1) what side of the page has the margin, and 2) what percentage of the page that margin will take up. Wrap everything that should be in a side-by-side layout in an element with one of those classes. Since these are two-column layouts, there should be two elements inside the <code>".margin-layout-right-25"</code> block; however, if you want one side to stretch along several elements from the other side, such as a long sidebar, wrap everything besides the margin block in an empty <code>&lt;div&gt;</code>.</p>
+<p>If that’s unclear, look at the source for this chapter to see it in action.</p>
+</section>
+<section id="sidebars" class="level4">
+<h4>Sidebars</h4>
+<p>Create a sidebar box with a background fill and condensed text. This is good for things like definitions of a geography, indicators, etc, and works best alongside a large set of text. Use a margin layout, putting your sidebar content in an element with class <code>"sidebar"</code>.</p>
+</section>
+</div>
+<section id="empty-sidebar" class="level3 sidebar">
+<h3>Empty sidebar</h3>
+<ul>
+<li>There’s nothing in this sidebar.</li>
+<li>It’s just an example of how to use these layouts.</li>
+<li>Sidebars are good for breaking up lists separate from your text.</li>
+</ul>
+</section>
+</div>
+<section id="asides" class="level4">
+<h4>Asides</h4>
+<div class="margin-layout-right-20">
+<p>Quarto lets you place asides in the margin. For example, imagine there’s some jargon in this paragraph that could benefit from a definition, but that doesn’t need to take up space in the main body. Similar to sidebars, use a margin layout, then place your aside in an element with the class <code>"aside"</code>.</p>
+<div class="column-margin">
+<p>This is an aside with a note to go with the adjacent paragraph.</p>
+</div>
+</div>
+</section>
+<section id="page-breaks" class="level4">
+<h4>Page breaks</h4>
+<p>Create a section that won’t have a page break, such as to keep a paragraph and the related figure on the same page.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"no-break"</span><span class="kw">&gt;&lt;/div&gt;</span></span></code></pre></div>
+</section>
+</section>
+</section>
+<section id="notes" class="level2">
+<h2>Notes</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-acs21" class="csl-entry" role="listitem">
+1. US Census Bureau. (2021). <em>American <span>Community Survey</span> 5-year estimates</em>. <a href="https://data.census.gov/">https://data.census.gov/</a>
+</div>
+</div>
+<div class="back-cover">
+<p>Closing information about funders, citation, etc.</p>
+</div>
+</section>
+
+
+
+
+
+</body></html>

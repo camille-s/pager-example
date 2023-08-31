@@ -1,0 +1,80 @@
+---
+title: Nice report
+author: DataHaven
+date: last-modified
+date-format: MMMM YYYY
+bibliography: references.bib
+csl: apa-numeric-superscript.csl
+format: 
+  pdf:
+    pdf-engine: pagedjs-cli
+    section-divs: true
+    css: style/paged-style.css
+  html:
+    minimal: true
+    section-divs: true
+    css: style/paged-style.css
+toc: true
+toc-depth: 2
+toc-location: body
+toc-title: Contents
+reference-location: document
+citation-location: document
+fig-cap-location: top
+tbl-cap-location: top
+execute: 
+  echo: false
+params:
+  loc: New Haven
+---
+
+```{r}
+loc <- params$loc
+```
+
+---
+subtitle: "`r paste('Draft', loc, sep = ' - ')`"
+---
+
+```{r}
+#| label: front-cover
+#| child: chapters/00_front_cover.qmd 
+```
+
+## Introduction
+
+<div id="header-left" class="hidden">{{< meta subtitle >}}</div>
+
+<div id="header-right" class="hidden">{{< meta title >}}</div>
+
+This is an example of how to build a paged report. After processing some metadata here, it uses child documents to incorporate different chapters---this can be useful for putting together longer reports. Those child documents inherit the parent document's global environment, so use this document to load packages, source scripts, and set parameters that will be used throughout. As an example, this document has a parameter `loc` which is used to create headers.
+
+I'm also including front and back covers as starting points. paged.js, the JavaScript library used for splitting the HTML into pages and populating the margins, headers, footers, etc., has classes to denote front cover material and back cover material that then get special treatment (larger fonts, no page numbers, different margins, etc.).
+
+## Styling
+
+```{r}
+#| label: styling
+#| child: chapters/01_styling.qmd 
+```
+
+## Utilities
+
+```{r}
+#| label: utilities
+#| child: chapters/02_utilities.qmd 
+```
+
+## Notes
+
+```{r}
+#| label: notes
+#| child: chapters/03_notes.qmd 
+```
+
+
+```{r}
+#| label: back-cover
+#| child: chapters/99_back_cover.qmd 
+```
+

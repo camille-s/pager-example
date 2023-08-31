@@ -1,0 +1,9 @@
+---
+# format: pager-html
+---
+
+<div class="back-cover">
+
+Closing information about funders, citation, etc.
+
+</div>

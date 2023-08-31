@@ -1,0 +1,83 @@
+---
+# format: pager-html
+---
+
+### References
+
+[Include references](https://quarto.org/docs/authoring/footnotes-and-citations.html) from a Bibtex document so they'll be linked to Zotero or another citation manager. A starter set of common references with shortcodes is included in the file [./references.bib](./references.bib), and a formatter for numbered APA citations is in [./apa-numeric-superscript.csl](./apa-numeric-superscript.csl). For example, if I write something based on the 2021 ACS, I can cite it like this: 
+
+``` md
+Some facts based on the ACS. [@acs21]
+```
+
+which will look like this:
+
+> Some facts based on the ACS. [@acs21]
+
+This will automatically create a bibliography item placed in the Notes section. If there's a `html <div>` element with the ID `html "refs"` anywhere, bibliography items will be placed there; otherwise they're placed at the end of the document. Some YAML settings will change this. If you'd rather create the bibliography manually, set
+
+``` yaml
+suppress-bibliography: true
+```
+
+If you want all references to go in the margin instead, set
+
+``` yaml
+reference-location: margin
+```
+
+### Custom classes
+
+<div class="margin-layout-right-25">
+
+
+
+<div>
+
+I've added a few classes to the stylesheets that I've found useful in making things like the equity reports. To use them, wrap your text in the requisite HTML block.
+
+#### Column layouts
+
+There's a set of classes for creating layouts with margins on either the left or right of the page. Apply them with the classes `"margin-layout-right-20"`, `"margin-layout-right-25"`, `"margin-layout-left-20"`, or `"margin-layout-left-25"`, which denote 1) what side of the page has the margin, and 2) what percentage of the page that margin will take up. Wrap everything that should be in a side-by-side layout in an element with one of those classes. Since these are two-column layouts, there should be two elements inside the `".margin-layout-right-25"` block; however, if you want one side to stretch along several elements from the other side, such as a long sidebar, wrap everything besides the margin block in an empty `<div>`. 
+
+If that's unclear, look at the source for this chapter to see it in action.
+
+#### Sidebars
+
+Create a sidebar box with a background fill and condensed text. This is good for things like definitions of a geography, indicators, etc, and works best alongside a large set of text. Use a margin layout, putting your sidebar content in an element with class `"sidebar"`.
+
+</div>
+
+<div class="sidebar">
+
+### Empty sidebar
+
+* There's nothing in this sidebar.
+* It's just an example of how to use these layouts.
+* Sidebars are good for breaking up lists separate from your text.
+
+</div>
+
+</div>
+
+#### Asides
+
+<div class="margin-layout-right-20">
+
+Quarto lets you place asides in the margin. For example, imagine there's some jargon in this paragraph that could benefit from a definition, but that doesn't need to take up space in the main body. Similar to sidebars, use a margin layout, then place your aside in an element with the class `"aside"`.
+
+<div class="aside">
+
+This is an aside with a note to go with the adjacent paragraph.
+
+</div>
+
+</div>
+
+#### Page breaks
+
+Create a section that won't have a page break, such as to keep a paragraph and the related figure on the same page.
+
+``` html
+<div class="no-break"></div>
+```

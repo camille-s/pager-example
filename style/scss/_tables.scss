@@ -1,0 +1,27 @@
+span.na {
+  color: $gray-600;
+}
+
+table {
+  border-bottom: 1px solid $table-border-color;
+  margin-bottom: $spacer * 3;
+  break-inside: avoid;
+
+  thead th {
+    // background-color: $table-head-bg;
+    font-weight: 600;
+  }
+
+  &.table-sm th, &.table-sm td {
+    line-height: 1.25em;
+  }
+
+  &.table {
+    font-family: $font-family-table, $font-family-base;
+  }
+}
+
+tr[grouplength] {
+  // background-color: lighten($table-head-bg, 4%);
+  font-weight: 600;
+}

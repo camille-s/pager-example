@@ -1,0 +1,20 @@
+// @media print {
+//   section h2 {
+//     break-before: always;
+//     break-after: avoid;
+//   }
+// }
+
+section h2 {
+  break-before: always;
+  break-after: avoid;
+}
+
+@page {
+  size: letter;
+  margin: 1in 0.75in;
+}
+
+body {
+  margin: 1in 0.75in;
+}
