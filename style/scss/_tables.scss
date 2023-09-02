@@ -25,3 +25,9 @@ tr[grouplength] {
   // background-color: lighten($table-head-bg, 4%);
   font-weight: 600;
 }
+
+table, .table {
+  th, td {
+    padding: $spacer * 0.25;
+  }
+}

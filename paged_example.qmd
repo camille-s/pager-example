@@ -1,6 +1,8 @@
 ---
 title: Nice report
-author: DataHaven
+author: 
+  - name: Author One
+  - name: Author Two
 date: last-modified
 date-format: MMMM YYYY
 bibliography: references.bib
@@ -14,14 +16,19 @@ format:
     minimal: true
     section-divs: true
     css: style/paged-style.css
+    # include-in-header: 
+    #   text: <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
 toc: true
 toc-depth: 2
 toc-location: body
 toc-title: Contents
 reference-location: document
 citation-location: document
+citation: true
+appendix-cite-as: display
 fig-cap-location: top
 tbl-cap-location: top
+org-name: DataHaven
 execute: 
   echo: false
 params:
@@ -32,20 +39,27 @@ params:
 loc <- params$loc
 ```
 
+
 ---
 subtitle: "`r paste('Draft', loc, sep = ' - ')`"
 ---
 
+<div class="front-matter">
+
 ```{r}
-#| label: front-cover
-#| child: chapters/00_front_cover.qmd 
+#| label: title-page
+#| child: chapters/00_title_page.qmd 
 ```
+
+</div>
 
 ## Introduction
 
 <div id="header-left" class="hidden">{{< meta subtitle >}}</div>
 
-<div id="header-right" class="hidden">{{< meta title >}}</div>
+<div id="header-right" class="hidden ">{{< meta title >}}</div>
+
+<div id="logo" class="hidden">{{< meta org-name >}}</div>
 
 This is an example of how to build a paged report. After processing some metadata here, it uses child documents to incorporate different chapters---this can be useful for putting together longer reports. Those child documents inherit the parent document's global environment, so use this document to load packages, source scripts, and set parameters that will be used throughout. As an example, this document has a parameter `loc` which is used to create headers.
 
@@ -72,9 +86,12 @@ I'm also including front and back covers as starting points. paged.js, the JavaS
 #| child: chapters/03_notes.qmd 
 ```
 
+<div class="back-cover">
 
+## About this document {.unlisted}
 ```{r}
 #| label: back-cover
 #| child: chapters/99_back_cover.qmd 
 ```
 
+</div>

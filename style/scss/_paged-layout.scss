@@ -35,8 +35,10 @@
     content: none;
   }
   counter-reset: page 1;
-  break-after: page;
+  // break-after: page;
+
 }
+
 
 @page backmatter {
   @top-left {
@@ -55,12 +57,6 @@
   // break-before: page;
 }
 
-.front-cover, .front-matter {
-  page: frontmatter;
-}
-.back-cover {
-  page: backmatter;
-}
 
 @page chapter {
   @top-left {
@@ -87,15 +83,6 @@
   }
 }
 
-// .front-page, .front-matter-container {
-//   padding-left: 2em;
-//   padding-right: 2em;
-
-//   > div, > div.blurb {
-//     padding: 0.3em;
-//   }
-// }
-
 // page breaks
 section.level2 {
   break-before: always;
@@ -106,16 +93,12 @@ section.level2 {
   }
 }
 
-#TOC {
-  // break-after: page;
-  page: frontmatter;
-}
-
 .logo {
   @include logo;
 }
 
-.front-cover .logo {
+.front-cover .logo,
+.front-matter .logo {
   font-size: 2.75rem;
 }
 
@@ -132,7 +115,50 @@ section.level2 {
   position: running(headerRight);
 }
 
-div.blurb {
-  position: absolute;
-  bottom: 0;
+.front-matter,
+.front-cover,
+#TOC {
+  page: frontmatter;
+}
+
+@media print {
+  .front-matter  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10px 1fr;
+    grid-row-gap: 4px;
+    min-height: 500px;
+    align-items: end;
+  }
+  .blurb {
+    grid-row: -1;
+  }
+}
+
+
+
+
+.back-cover {
+  page: backmatter;
+}
+
+@media not print {
+  section.level2 {
+    margin-top: 4rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-top: 4px solid $gray-200;
+      width: 30%;
+    }
+
+    h2 {
+      padding-top: 1.5em;
+    }
+  }
+
+  body {
+    padding: 4em;
+  }
 }

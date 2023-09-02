@@ -1,7 +1,3 @@
----
-# format: pager-html
----
-
 ### References
 
 [Include references](https://quarto.org/docs/authoring/footnotes-and-citations.html) from a Bibtex document so they'll be linked to Zotero or another citation manager. A starter set of common references with shortcodes is included in the file [./references.bib](./references.bib), and a formatter for numbered APA citations is in [./apa-numeric-superscript.csl](./apa-numeric-superscript.csl). For example, if I write something based on the 2021 ACS, I can cite it like this: 
@@ -28,12 +24,6 @@ reference-location: margin
 
 ### Custom classes
 
-<div class="margin-layout-right-25">
-
-
-
-<div>
-
 I've added a few classes to the stylesheets that I've found useful in making things like the equity reports. To use them, wrap your text in the requisite HTML block.
 
 #### Column layouts
@@ -42,9 +32,15 @@ There's a set of classes for creating layouts with margins on either the left or
 
 If that's unclear, look at the source for this chapter to see it in action.
 
+<div class="margin-layout-right-25">
+
+<div>
+
 #### Sidebars
 
-Create a sidebar box with a background fill and condensed text. This is good for things like definitions of a geography, indicators, etc, and works best alongside a large set of text. Use a margin layout, putting your sidebar content in an element with class `"sidebar"`.
+Create a sidebar box with a background fill and condensed text. This is good for things like definitions of a geography, indicators, etc, and works best alongside a large set of text. Use a margin layout, putting your sidebar content in an element with class `"sidebar"`. Padding with some extra text so its usefulness is clearer. 
+
+Aute proident consectetur fugiat ad est. Voluptate eu fugiat do ex reprehenderit proident dolor dolor aute cupidatat consectetur mollit. Consectetur commodo non adipisicing consequat officia dolore nulla nostrud sint quis minim sit dolor. Aliquip non consectetur culpa esse in quis ad ut in. Duis veniam et sit voluptate cupidatat aliqua do nostrud est voluptate enim. Fugiat mollit tempor aliqua ea laboris. Adipisicing elit in Lorem veniam voluptate pariatur officia ex aliquip amet enim qui laborum fugiat.
 
 </div>
 

@@ -1,0 +1,15 @@
+<!---
+  TODO: use Lua filter to wrap TOC in .front-matter div
+--->
+
+<div class="empty"></div> 
+
+<div class="blurb">
+
+This is an example of front matter to go with the table of contents.
+
+This document was last modified in {{<meta date >}}.
+
+<div class="logo">{{< meta org-name >}}</div>
+
+</div>

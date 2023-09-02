@@ -20,7 +20,7 @@ h2, .h2 {
   font-size: 2.5em;
 }
 
-h2, h3, .h2, .h3 {
+h2, h3, h4, .h2, .h3, .h4 {
   break-after: avoid;
   font-weight: 700;
 }
@@ -31,6 +31,18 @@ h2, h3, .h2, .h3 {
   border-top: 3px solid $gray-500;
   border-bottom: 3px solid $gray-500;
   padding: ($spacer * 0.4) 0;
+}
+
+header#title-block-header {
+  p {
+    font-size: $font-size-lg;
+  }
+  .subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $secondary;
+    text-transform: uppercase;
+  }
 }
 
 section {

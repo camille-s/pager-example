@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="DataHaven">
+<meta name="author" content="Author One">
+<meta name="author" content="Author Two">
 
 <title>Nice report</title>
 <style>
@@ -121,9 +122,10 @@ div.csl-indent {
 <header id="title-block-header">
 <h1 class="title">Nice report</h1>
 <p class="subtitle">Draft - New Haven</p>
-<p class="author">DataHaven</p>
+<p class="author">Author One</p>
+<p class="author">Author Two</p>
 
-<p class="date">August 2023</p>
+<p class="date">September 2023</p>
 </header>
 <nav id="TOC" role="doc-toc">
     <h2 id="toc-title">Contents</h2>
@@ -135,6 +137,21 @@ div.csl-indent {
   <li><a href="#notes" id="toc-notes">Notes</a></li>
   </ul>
 </nav>
+<div class="front-matter">
+<!---
+  TODO: use Lua filter to wrap TOC in .front-matter div
+--->
+<div class="empty">
+
+</div>
+<div class="blurb">
+<p>This is an example of front matter to go with the table of contents.</p>
+<p>This document was last modified in September 2023.</p>
+<div class="logo">
+<p>DataHaven</p>
+</div>
+</div>
+</div>
 <section id="introduction" class="level2">
 <h2>Introduction</h2>
 <div id="header-left" class="hidden">
@@ -142,6 +159,9 @@ div.csl-indent {
 </div>
 <div id="header-right" class="hidden">
 <p>Nice report</p>
+</div>
+<div id="logo" class="hidden">
+<p>DataHaven</p>
 </div>
 <p>This is an example of how to build a paged report. After processing some metadata here, it uses child documents to incorporate different chapters—this can be useful for putting together longer reports. Those child documents inherit the parent document’s global environment, so use this document to load packages, source scripts, and set parameters that will be used throughout. As an example, this document has a parameter <code>loc</code> which is used to create headers.</p>
 <p>I’m also including front and back covers as starting points. paged.js, the JavaScript library used for splitting the HTML into pages and populating the margins, headers, footers, etc., has classes to denote front cover material and back cover material that then get special treatment (larger fonts, no page numbers, different margins, etc.).</p>
@@ -216,19 +236,18 @@ div.csl-indent {
 </section>
 <section id="custom-classes" class="level3">
 <h3>Custom classes</h3>
-<div class="margin-layout-right-25">
-<div>
 <p>I’ve added a few classes to the stylesheets that I’ve found useful in making things like the equity reports. To use them, wrap your text in the requisite HTML block.</p>
 <section id="column-layouts" class="level4">
 <h4>Column layouts</h4>
 <p>There’s a set of classes for creating layouts with margins on either the left or right of the page. Apply them with the classes <code>"margin-layout-right-20"</code>, <code>"margin-layout-right-25"</code>, <code>"margin-layout-left-20"</code>, or <code>"margin-layout-left-25"</code>, which denote 1) what side of the page has the margin, and 2) what percentage of the page that margin will take up. Wrap everything that should be in a side-by-side layout in an element with one of those classes. Since these are two-column layouts, there should be two elements inside the <code>".margin-layout-right-25"</code> block; however, if you want one side to stretch along several elements from the other side, such as a long sidebar, wrap everything besides the margin block in an empty <code>&lt;div&gt;</code>.</p>
 <p>If that’s unclear, look at the source for this chapter to see it in action.</p>
 </section>
+<div class="margin-layout-right-25">
 <section id="sidebars" class="level4">
 <h4>Sidebars</h4>
-<p>Create a sidebar box with a background fill and condensed text. This is good for things like definitions of a geography, indicators, etc, and works best alongside a large set of text. Use a margin layout, putting your sidebar content in an element with class <code>"sidebar"</code>.</p>
+<p>Create a sidebar box with a background fill and condensed text. This is good for things like definitions of a geography, indicators, etc, and works best alongside a large set of text. Use a margin layout, putting your sidebar content in an element with class <code>"sidebar"</code>. Padding with some extra text so its usefulness is clearer.</p>
+<p>Aute proident consectetur fugiat ad est. Voluptate eu fugiat do ex reprehenderit proident dolor dolor aute cupidatat consectetur mollit. Consectetur commodo non adipisicing consequat officia dolore nulla nostrud sint quis minim sit dolor. Aliquip non consectetur culpa esse in quis ad ut in. Duis veniam et sit voluptate cupidatat aliqua do nostrud est voluptate enim. Fugiat mollit tempor aliqua ea laboris. Adipisicing elit in Lorem veniam voluptate pariatur officia ex aliquip amet enim qui laborum fugiat.</p>
 </section>
-</div>
 <section id="empty-sidebar" class="level3 sidebar">
 <h3>Empty sidebar</h3>
 <ul>
@@ -261,8 +280,25 @@ div.csl-indent {
 1. US Census Bureau. (2021). <em>American <span>Community Survey</span> 5-year estimates</em>. <a href="https://data.census.gov/">https://data.census.gov/</a>
 </div>
 </div>
-<div class="back-cover">
-<p>Closing information about funders, citation, etc.</p>
+</section>
+<section id="about-this-document" class="level2 unlisted back-cover">
+<h2 class="unlisted">About this document</h2>
+<div class="csl-entry quarto-appendix-citeas" role="listitem">
+
+</div>
+<div class="blurb">
+<section id="acknowledgements" class="level3">
+<h3>Acknowledgements</h3>
+<p>Closing information about funders, etc.</p>
+</section>
+<section id="recommended-citation" class="level3">
+<h3>Recommended citation</h3>
+<p>xx</p>
+</section>
+<section id="about-the-organization" class="level3">
+<h3>About the organization</h3>
+<p>Occaecat consectetur sint dolore mollit velit. Esse elit irure fugiat ut. Eu excepteur minim magna ut minim nostrud ullamco sint deserunt occaecat. Exercitation sint ipsum amet reprehenderit velit magna aliqua sint exercitation consectetur labore. Id ipsum irure magna aute aliqua labore qui proident amet minim incididunt deserunt sunt quis. Officia ipsum ipsum commodo officia duis ipsum irure officia.</p>
+</section>
 </div>
 </section>
 

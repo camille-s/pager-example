@@ -1,9 +1,18 @@
----
-# format: pager-html
----
+<div class="csl-entry quarto-appendix-citeas"></div>
 
-<div class="back-cover">
+<div class="blurb">
 
-Closing information about funders, citation, etc.
+### Acknowledgements
+
+Closing information about funders, etc.
+
+### Recommended citation
+
+xx
+
+### About the organization
+
+Occaecat consectetur sint dolore mollit velit. Esse elit irure fugiat ut. Eu excepteur minim magna ut minim nostrud ullamco sint deserunt occaecat. Exercitation sint ipsum amet reprehenderit velit magna aliqua sint exercitation consectetur labore. Id ipsum irure magna aute aliqua labore qui proident amet minim incididunt deserunt sunt quis. Officia ipsum ipsum commodo officia duis ipsum irure officia.
+
 
 </div>
